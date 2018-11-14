@@ -1,5 +1,8 @@
 require "bundler/setup"
 require "googlebooksclient"
+require 'rspec'
+require 'webmock/rspec'
+# require_relative '../lib/googlebooksclient'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
