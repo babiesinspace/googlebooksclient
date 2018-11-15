@@ -1,8 +1,6 @@
 # Googlebooksclient
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/googlebooksclient`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This is my first gem that I wrote as a simple Google Books API Client.
 
 ## Installation
 
@@ -22,7 +20,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Add the gem to your Gemfile and bundle. You can then instantiate a new Googlebooksclient::Client object like so:
+
+    $ client = Googlebooksclient::Client.new
+
+And then perform a simple Volume search:
+
+    $ client.volumes("The Wheel of Time")
+
+Which will return an array of books!
+
+Very simple so start, but hopefully I will build off of this base in the next version.
 
 ## Development
 
@@ -32,7 +40,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/googlebooksclient.
+Bug reports and pull requests are welcome on GitHub at https://github.com/babiesinspace/googlebooksclient.
 
 ## License
 
