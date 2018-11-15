@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Alex Cooper"]
   spec.email         = ["allie.g.cooper@gmail.com"]
 
-  spec.summary       = "Summary here "
-  spec.description   = "My description will go here "
+  spec.summary       = "This is my first gem that I wrote as a simple Google Books API Client."
+  spec.description   = "A simple Google Books API Client"
   spec.homepage      = "https://github.com/babiesinspace/googlebooksclient"
   spec.license       = "MIT"
 
