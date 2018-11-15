@@ -6,7 +6,7 @@ module Googlebooksclient
 
       def volumes(options = "")
         response = self.class.get("/volumes", {query: { q: options.split(" ").join("+") } })
-        response.parsed_response ? response.parsed_response : nil
+        response.parsed_response ? response.parsed_response["items"] : nil
       end
 
     end
