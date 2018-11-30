@@ -4,8 +4,12 @@ module Googlebooksclient
 
     module Volumes
 
-      def volumes(options = "")
-        response = self.class.get("/volumes", {query: { q: options.split(" ").join("+") } })
+      def volumes(search_term = "", options = {})
+        query = search_term.split(" ").join("+")
+        if !options.empty?
+          query += add_filters(options)
+        end
+        response = self.class.get("/volumes", {query: { q: query } })
         response.parsed_response ? response.parsed_response["items"] : nil
       end
 
