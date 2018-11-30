@@ -13,6 +13,18 @@ module Googlebooksclient
         response.parsed_response ? response.parsed_response["items"] : nil
       end
 
+      def add_filters(filter_params)
+        # take a hash of search terms and format them into a string
+        query_string = ""
+        filter_params.keys do |filter|
+          term = filter_params[filter]
+          term = term.split(" ").join("+")
+          formatted_search_term = "+" + filter.to_s + ":" + term
+          query_string += formatted_search_term
+        end
+        query_string
+      end
+
     end
 
   end
