@@ -81,8 +81,13 @@ RSpec.describe Googlebooksclient do
 
     describe ".add_filters" do
       let(:filter_params) { {"inauthor": "keyes", "intitle": "flowers"} }
+
       it "takes in a Hash and returns a string" do
         expect(client.add_filters(filter_params)).to be_an_instance_of(String)
+      end
+
+      it "formats that string properly for the request" do
+        expect(client.add_filters(filter_params)).to eql("+inauthor:keyes+intitle:flowers")
       end
     end
   end
