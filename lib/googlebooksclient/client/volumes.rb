@@ -1,5 +1,3 @@
-# require 'byebug'
-
 module Googlebooksclient
 
   class Client
