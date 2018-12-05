@@ -30,7 +30,13 @@ And then perform a simple Volume search:
 
 Which will return an array of books!
 
-Very simple so start, but hopefully I will build off of this base in the next version.
+If you'd like to filter that search, the volumes method can also take an additional options parameter with filters. This should be in the form of a Hash, with each key a search filter made available by [Google Books](https://developers.google.com/books/docs/v1/using#PerformingSearch). The keys may be Strings or Symbols.
+
+    $ client.volumes("Harry", {"inauthor": "rowling", intitle: "Goblet"})
+
+You may also search ONLY with filters, but then you must pass an empty string as the first argument. So using the above example would look like:
+
+    $ client.volumes("", {"inauthor": "rowling", intitle: "Goblet"})
 
 ## Development
 
